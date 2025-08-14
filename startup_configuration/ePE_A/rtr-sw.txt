@@ -1,0 +1,224 @@
+hostname ePE_A
+buggy
+!
+logging buffered debug 10240
+logging file debug /rtr/run/logs/freertr.log
+logging rotate 655360000 /rtr/run/logs/freertr.old
+logging syslog informational local7 172.20.20.1
+!
+crypto rsakey rsa import $v10$TUlJRW9nSUJBQUtDQVFFQWcveEMrUlRuVUxsb0ZGOFFQRWNCRHBDWjhjR3JSS0VGSUtwQ3k5WVFaRnkrMThOanFVa3dBRkJEQWp5NHdwS2dSa0ZrK0FXL2htdGcvNi9xT2RGZDIyL2JoL3BZVllXbnFJWVRaR05IZzBDdlRRZEpyaGJUOEpkTEsyOVZDbDN6b0wyaXVTVHAvNUNabjNBSHZwOURlUjBQejlhbngycTFHZzJ4N0pocVUxa0RlVms4S09CUW5YUjB6bFY1SjB5RmQ2aVRBeURZTVRYR0FTL09PWXNTWXBKVnBCN1kzeEhFRGUxcFRpeHVxOXloYmJoSnZrRWMwb2pjTWpVb3BZdHc3VExkUzhpdG14ai9tbXFmeFhDdE42cUIzMTZCcDA5Z2F0aUwzVTdwRWx2aHMwcmo4VTN4UHV0NHg3R0JDUU9DcXdYYTRSSzNqTXdWSTMvVWpaM0Nid0lEQVFBQkFvSUJBSFF4d1VSSGd0MHVYTktTWGxpeXFkdUlzZjZENGFPcG5qb0Rxb3FKQ2lWUkFUSXljYXEzSStzaXZkdGFXYzN5QitmUjZuSHZuWTFaT3l2ZVV2WlR1NjFUN0pEcGRKclY3NlFOWlVVYm9mbUxHTWxYZ1NZaU1yTzhmaERmRXA3dDEyM0xoVlk1aVVmVXBXb1gxcm1hdkd3RGljZ1AwZVZkcTlJai9GK3VUdXpRUkU3QmNFeDZLdFpMalVqMGViTnY5U3BHajRhbEMwTnNDSWlGZFlIakprdThHU09NL3JyS0UvcGJCT0ZrR0dJOEtNOUEwM2pWVm0zUng4Zk9hV0ttK1NTVGNQWlpVQ0pjMGtmNkRycnBoYmZVQUxJVjYvUFNPQUJKck41clF5MmxCMGFac1R0YmlCM05WSHZnMDkrcTBYYjg1dlU5OUU0WW1zem1RVGNSNWdFQ2dZRUE1NG80a0dlVVlpcy9qdWloTVExbElIT2lydS9sOVVWT2NHcU85cTd2OE9VazdUVE14ZWxaeFJmTldsb043UlJmTHRnVU5QU3RPQkxqQUxrR25TS0xXalJhSUYrbzNoUmNEaEtMQ2d0TGM4c09Na1ovMlVmc1E4QTA2L3J6THRucHk4MWtnKy9aa2NPd3JUS0t1QXJaWlBrZHR0dTh0UlZxRVNIMFY1ajlRNWtDZ1lFQWtlMnVxU000WUQ3WnVqZDY2RjRuOWJsLzRsQU04aE9PWmZldk1QV3lHSjdzNDY0TkR4ZDQ0NG5kbk5Bb01Ga1JOS0RRcHcrSm1sV01XSmRUaHVSNHk0OTVGZ3U5ejlSWXdJWkJ2UGJPd0phcWl1dU1CK0s3WCtLM1RWck1CK3NHNzRLbHpzMlN2aExHYll3Y29sN2N6TUZSeVg3YWxQRW1NME5Iam02QiswY0NnWUJueEVkaldEaGs0cE1DZmZrM25aUXp2ZjhydlhIbXdSL05POFJFZzlRZXR1TWN0NndLQ25GajVpM3ZEeXJzbEZPd0Q4REdsdDFHb3hnL0M2ME9JUndvMmd1R05MamVobXRYRnpKZTF2OENydjcyd3llcS9oUEJyVk5LYXRZdnFoT2dkYlZWZDltZS9QK2lMMk9CNWNMV0FOc3pSemxFUW91ZGtBVU1lUkVRQ1FLQmdGdTMzdXB4dDVKT2pueExPSlhwOEFXeXBKMHlvU0JaaUV1d2hFMHFiOWluc3M1YmE5dkxiZkRkaXd0dmpZTHR5REdpemVIaWt5TU1sOXhxcUZZRkxhTUx0eGhUSXVjSVdRd1FsaXJWbVJkVTJ6WGJYRFRzbmNaamNjQk56Q1ZCNUNjUG4zVStvZmVUUjJJOUNSWkl0MUIrUlJCM0NaMUpnREFDSG14NEtud3JBb0dBTnYyOTZacW9MaUNoc084V0hvMkIwZDhiSXhMQW9qQjREemI4OHdhZUtxa2J1Z2swd0tzSFk3a2VURFJZNlJhbUlqTVBIakg0QUMvZVBhY0FzNTNSLzE5OFVjR1kyQzZLMUJEbEVodTUwNkdOblpLeXY3QktSUVEwZENvRHJXcXIxZWQwN3dIWlUzcmZSR3JVVVJxV3RWbGp3NmpDclBTanhVN0xuTjQwMlhzPQ==
+!
+crypto dsakey dsa import $v10$TUlJQnVRSUJBQUtCZ0RqM0VGTjYzaU00SXZVUURxOFNScVRhUFYyY0tKQzFZYlo1RWdBY2d2Mm1IVnNFSlIrYkg4NVEwOFdnY3Ara3FtcTY3U1lvRXBkQ2NkcDVlUmN4QUR6WGZ2Y3RsSVJvb0piOGdhUGFidmZqRVZwSGlQcHVFaUlSRVdROWpqaTJlemo5ZCs0ZTZrazJaWEtQa1B3QVBKOTI3T0xkOHpGTEVuaHllTlV1VjY3UEFoVUF3MTZhR1V6d1cxY3hxamNJK2Y1aFNzdGQydmtDZ1lBUVVMaHQ2UUZKQUoyektZMVJyYkdTcDcyOGVRYzk5ZTdVc2p2K1JRNE40cDY0WGpsSnRBVUpJM0x6RTY3S3VxTnBYTzhoVFExZFppRDBMNW9CcHh5SGFmazF4UjZSVHRqNmV2K09SbnQvc3l3dkk5dkQ2d1NGVS9ZZjQvZElEL0pSWnBNTjIvL29UVXM4Zi9UNHpiWFdvWnNRZjd5Mll5WGh3VytSdmhwUFRRS0JnQkcyazJ5WmtTZVlSWHlWd091Qkl0a0I4Z3NIb24xZFQrTEdyLzNabjVKTjJ6eVZLMXZibkVWc3hJOW92N0Fzak1KT0JFYzF0cndLcTlHRXRJMzFtdkRUOVVNNTdYTnVLckQ5NWxaeVBDOTVmMHZadEswenVCUUg3QVhDbEVyMDZrN3JoN0VBVExqOFBJVW1Qcmg4K1JZWGFXRmhhelNoYUQ2T1QwRzVJMjZlQWhRd01tZ0JKWXd6Wm1HNDhrWkxaUVgzaThldXhBPT0=
+!
+crypto ecdsakey ecdsa import $v10$TUhNQ0FRRUVIeFNYanl3WUxLSldndERwZEh6TE84bDN4d2NQdmFZQ0ZnN0JvK2FEYUlPZ0J3WUZLNEVFQUFxaFJBTkNBQVRkc3ovL1VQMFNnNXhVV3FmL2tqd0tVVi9mYkFIUjQ0VUE4cy9qT2xmSXhETlNxVFpLbndTYVd5RjRFTWFTYjRiUFBhSGV0RG9MRlhyM0s5cHFLUTM3
+!
+aaa userlist usr
+ username rare
+ username rare password $v10$cmFyZQ==
+ exit
+!
+scheduler errors
+ time 600000
+ delay 30000
+ command clear errors freerror@nop.hu
+ start
+ exit
+!
+access-list custA_Filter
+ sequence 10 permit all 100.50.80.0 255.255.255.248 all any all
+ sequence 20 deny all any all any all
+ exit
+!
+prefix-list ALL4
+ sequence 10 permit 0.0.0.0/0 ge 0 le 0
+ exit
+!
+prefix-list ALL6
+ sequence 10 permit ::/0 ge 0 le 0
+ exit
+!
+bundle 10
+ exit
+!
+bundle 11
+ exit
+!
+bundle 30
+ exit
+!
+vrf definition DEF_SEGROUT
+ rd 200:1
+ rt4import 100:100
+ rt4export 100:100
+ rt6import 100:100
+ rt6export 100:100
+ exit
+!
+vrf definition OOB
+ exit
+!
+router ospf4 10
+ vrf DEF_SEGROUT
+ router-id 122.200.200.1
+ traffeng-id 0.0.0.0
+ segrout 500 base 12000
+ area 0 enable
+ area 0 spf-ecmp
+ area 0 segrout
+ ecmp
+ exit
+!
+interface loopback1
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 122.200.200.1 255.255.255.255
+ router ospf4 10 enable
+ router ospf4 10 area 0
+ router ospf4 10 passive
+ router ospf4 10 segrout index 310
+ router ospf4 10 segrout node
+ no shutdown
+ log-link-change
+ exit
+!
+interface bundle10
+ description eASBRR1
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 20.200.135.2 255.255.255.252
+ mpls enable
+ router ospf4 10 enable
+ router ospf4 10 area 0
+ router ospf4 10 cost 700
+ no shutdown
+ log-link-change
+ exit
+!
+interface bundle11
+ description eASBRR2
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 20.200.135.6 255.255.255.252
+ mpls enable
+ router ospf4 10 enable
+ router ospf4 10 area 0
+ router ospf4 10 cost 700
+ no shutdown
+ log-link-change
+ exit
+!
+interface bundle30
+ description eCE_A
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 100.50.80.6 255.255.255.252
+ ipv4 access-group-out custA_Filter
+ no shutdown
+ log-link-change
+ exit
+!
+interface ethernet1
+ description [B30]eCE_A
+ bundle-group 30
+ no shutdown
+ log-link-change
+ exit
+!
+interface ethernet2
+ description [B10]eASBRR1_eth1
+ cdp enable
+ bundle-group 10
+ no shutdown
+ log-link-change
+ exit
+!
+interface ethernet255
+ description MGMT
+ vrf forwarding OOB
+ ipv4 address 172.20.20.10 255.255.255.0
+ no shutdown
+ no log-link-change
+ exit
+!
+interface ethernet3
+ description [B11]eASBRR2_eth1
+ cdp enable
+ bundle-group 11
+ no shutdown
+ log-link-change
+ exit
+!
+router bgp4 17000
+ vrf DEF_SEGROUT
+ local-as 17000
+ router-id 122.200.200.1
+ address-family labeled vpnuni
+ !
+ template BGP-LU remote-as 17000
+ template BGP-LU local-as 17000
+ template BGP-LU address-family labeled vpnuni
+ template BGP-LU distance 200
+ template BGP-LU additional-path-rx labeled vpnuni
+ template BGP-LU additional-path-tx labeled vpnuni
+ template BGP-LU update-source loopback1
+ template BGP-LU segrout
+ !
+ neighbor 122.200.200.100 template BGP-LU
+ !
+ neighbor 122.200.200.200 template BGP-LU
+ !
+ !
+ redistribute connected
+ exit
+!
+console0
+ no exec authorization
+ no login authentication
+ exit
+!
+proxy-profile OOB
+ vrf OOB
+ exit
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ipv4 route OOB 0.0.0.0 0.0.0.0 172.20.20.1
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+server telnet OOB
+ security authentication usr
+ security rsakey rsa
+ security dsakey dsa
+ security ecdsakey ecdsa
+ second-port 22
+ exec timeout 0
+ no exec authorization
+ login authentication usr
+ vrf OOB
+ exit
+!
+client proxy OOB
+client capture-path /rtr/run/pcap/
+client name-server 1.1.1.1
+client time-server europe.pool.ntp.org
+client time-zone CET
+!
+end
