@@ -98,7 +98,7 @@ interface bundle111
  exit
 !
 interface bundle17
- description ASBRR1
+ description ASBR1
  vrf forwarding DEF_SEGROUT
  ipv4 address 10.100.136.1 255.255.255.252
  mpls enable
@@ -110,7 +110,7 @@ interface bundle17
  exit
 !
 interface bundle18
- description ASBRR2
+ description ASBR2
  vrf forwarding DEF_SEGROUT
  ipv4 address 10.100.136.5 255.255.255.252
  mpls enable
@@ -146,7 +146,7 @@ interface ethernet255
  exit
 !
 interface ethernet3
- description [B17]ASBRR1_eth2
+ description [B17]ASBR1_eth2
  cdp enable
  bundle-group 17
  no shutdown
@@ -154,7 +154,7 @@ interface ethernet3
  exit
 !
 interface ethernet4
- description [B18]ASBRR2_eth2
+ description [B18]ASBR2_eth2
  cdp enable
  bundle-group 18
  no shutdown

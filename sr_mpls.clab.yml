@@ -26,30 +26,30 @@ topology:
       mgmt-ipv4: 172.20.20.5
       binds:
         - startup_configuration/P2/rtr-sw.txt:/rtr/rtr-sw.txt
-    ASBRR1:
+    ASBR1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
       mgmt-ipv4: 172.20.20.6
       binds:
-        - startup_configuration/ASBRR1/rtr-sw.txt:/rtr/rtr-sw.txt
-    ASBRR2:
+        - startup_configuration/ASBR1/rtr-sw.txt:/rtr/rtr-sw.txt
+    ASBR2:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
       mgmt-ipv4: 172.20.20.7
       binds:
-        - startup_configuration/ASBRR2/rtr-sw.txt:/rtr/rtr-sw.txt
-    eASBRR1:
+        - startup_configuration/ASBR2/rtr-sw.txt:/rtr/rtr-sw.txt
+    eASBR1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
       mgmt-ipv4: 172.20.20.8
       binds:
-        - startup_configuration/eASBRR1/rtr-sw.txt:/rtr/rtr-sw.txt
-    eASBRR2:
+        - startup_configuration/eASBR1/rtr-sw.txt:/rtr/rtr-sw.txt
+    eASBR2:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
       mgmt-ipv4: 172.20.20.9
       binds:
-        - startup_configuration/eASBRR2/rtr-sw.txt:/rtr/rtr-sw.txt
+        - startup_configuration/eASBR2/rtr-sw.txt:/rtr/rtr-sw.txt
     ePE_A:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
@@ -98,20 +98,20 @@ topology:
     - endpoints: ["PE_A:eth3","P2:eth1"]
     - endpoints: ["PE_B:eth2","P1:eth2"]
     - endpoints: ["PE_B:eth3","P2:eth2"]
-    - endpoints: ["P1:eth3","ASBRR1:eth1"]
-    - endpoints: ["P1:eth4","ASBRR2:eth1"]
-    - endpoints: ["P2:eth3","ASBRR1:eth2"]
-    - endpoints: ["P2:eth4","ASBRR2:eth2"]
-    - endpoints: ["ASBRR1:eth3","ASBRR2:eth3"]
-    - endpoints: ["ASBRR1:eth4","ASBRR2:eth4"]
-    - endpoints: ["ASBRR1:eth5","eASBRR1:eth5"]
-    - endpoints: ["ASBRR2:eth5","eASBRR2:eth5"]
-    - endpoints: ["eASBRR1:eth3","eASBRR2:eth3"]
-    - endpoints: ["eASBRR1:eth4","eASBRR2:eth4"]
-    - endpoints: ["eASBRR1:eth1","ePE_A:eth2"]
-    - endpoints: ["eASBRR1:eth2","ePE_B:eth2"]
-    - endpoints: ["eASBRR2:eth1","ePE_A:eth3"]
-    - endpoints: ["eASBRR2:eth2","ePE_B:eth3"]
+    - endpoints: ["P1:eth3","ASBR1:eth1"]
+    - endpoints: ["P1:eth4","ASBR2:eth1"]
+    - endpoints: ["P2:eth3","ASBR1:eth2"]
+    - endpoints: ["P2:eth4","ASBR2:eth2"]
+    - endpoints: ["ASBR1:eth3","ASBR2:eth3"]
+    - endpoints: ["ASBR1:eth4","ASBR2:eth4"]
+    - endpoints: ["ASBR1:eth5","eASBR1:eth5"]
+    - endpoints: ["ASBR2:eth5","eASBR2:eth5"]
+    - endpoints: ["eASBR1:eth3","eASBR2:eth3"]
+    - endpoints: ["eASBR1:eth4","eASBR2:eth4"]
+    - endpoints: ["eASBR1:eth1","ePE_A:eth2"]
+    - endpoints: ["eASBR1:eth2","ePE_B:eth2"]
+    - endpoints: ["eASBR2:eth1","ePE_A:eth3"]
+    - endpoints: ["eASBR2:eth2","ePE_B:eth3"]
     - endpoints: ["host1_1:eth1","PE_A:eth1"]
     - endpoints: ["host2_1:eth1","PE_B:eth1"]
     - endpoints: ["host1_2:eth1","ePE_A:eth1"]

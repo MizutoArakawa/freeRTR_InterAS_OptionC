@@ -81,7 +81,7 @@ interface loopback1
  exit
 !
 interface bundle10
- description eASBRR1
+ description eASBR1
  vrf forwarding DEF_SEGROUT
  ipv4 address 20.200.135.2 255.255.255.252
  mpls enable
@@ -93,7 +93,7 @@ interface bundle10
  exit
 !
 interface bundle11
- description eASBRR2
+ description eASBR2
  vrf forwarding DEF_SEGROUT
  ipv4 address 20.200.135.6 255.255.255.252
  mpls enable
@@ -121,7 +121,7 @@ interface ethernet1
  exit
 !
 interface ethernet2
- description [B10]eASBRR1_eth1
+ description [B10]eASBR1_eth1
  cdp enable
  bundle-group 10
  no shutdown
@@ -137,7 +137,7 @@ interface ethernet255
  exit
 !
 interface ethernet3
- description [B11]eASBRR2_eth1
+ description [B11]eASBR2_eth1
  cdp enable
  bundle-group 11
  no shutdown

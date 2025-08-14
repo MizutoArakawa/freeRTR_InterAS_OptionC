@@ -150,27 +150,27 @@ router bgp4 65000
  router-id 100.100.100.1
  address-family labeled vpnuni
  !
- template BGP-LU-ASBRR1 remote-as 65000
- template BGP-LU-ASBRR1 local-as 65000
- template BGP-LU-ASBRR1 address-family labeled vpnuni
- template BGP-LU-ASBRR1 distance 200
- template BGP-LU-ASBRR1 additional-path-rx labeled vpnuni
- template BGP-LU-ASBRR1 additional-path-tx labeled vpnuni
- template BGP-LU-ASBRR1 update-source loopback1
- template BGP-LU-ASBRR1 segrout
+ template BGP-LU-ASBR1 remote-as 65000
+ template BGP-LU-ASBR1 local-as 65000
+ template BGP-LU-ASBR1 address-family labeled vpnuni
+ template BGP-LU-ASBR1 distance 200
+ template BGP-LU-ASBR1 additional-path-rx labeled vpnuni
+ template BGP-LU-ASBR1 additional-path-tx labeled vpnuni
+ template BGP-LU-ASBR1 update-source loopback1
+ template BGP-LU-ASBR1 segrout
  !
- template BGP-LU-ASBRR2 remote-as 65000
- template BGP-LU-ASBRR2 local-as 65000
- template BGP-LU-ASBRR2 address-family labeled vpnuni
- template BGP-LU-ASBRR2 distance 200
- template BGP-LU-ASBRR2 additional-path-rx labeled vpnuni
- template BGP-LU-ASBRR2 additional-path-tx labeled vpnuni
- template BGP-LU-ASBRR2 update-source loopback1
- template BGP-LU-ASBRR2 segrout
+ template BGP-LU-ASBR2 remote-as 65000
+ template BGP-LU-ASBR2 local-as 65000
+ template BGP-LU-ASBR2 address-family labeled vpnuni
+ template BGP-LU-ASBR2 distance 200
+ template BGP-LU-ASBR2 additional-path-rx labeled vpnuni
+ template BGP-LU-ASBR2 additional-path-tx labeled vpnuni
+ template BGP-LU-ASBR2 update-source loopback1
+ template BGP-LU-ASBR2 segrout
  !
- neighbor 100.100.100.100 template BGP-LU-ASBRR1
+ neighbor 100.100.100.100 template BGP-LU-ASBR1
  !
- neighbor 100.100.100.200 template BGP-LU-ASBRR2
+ neighbor 100.100.100.200 template BGP-LU-ASBR2
  !
  !
  redistribute connected
