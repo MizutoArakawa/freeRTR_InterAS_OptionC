@@ -64,28 +64,28 @@ topology:
         - startup_configuration/ePE_B/rtr-sw.txt:/rtr/rtr-sw.txt
     
     #client
-    host1_1:
+    VPC1_1:
       kind: linux
       image: floui/tiny-net-tools:latest
       binds:
         - startup_configuration/VPC1_1/ifsetup.sh:/root/ifsetup.sh
       exec:
         - /bin/ash -c "chmod +x /root/ifsetup.sh && /root/ifsetup.sh"
-    host1_2:
+    VPC1_2:
       kind: linux
       image: floui/tiny-net-tools:latest
       binds:
         - startup_configuration/VPC1_2/ifsetup.sh:/root/ifsetup.sh
       exec:
         - /bin/ash -c "chmod +x /root/ifsetup.sh && /root/ifsetup.sh"
-    host2_1:
+    VPC2_1:
       kind: linux
       image: floui/tiny-net-tools:latest
       binds:
         - startup_configuration/VPC2_1/ifsetup.sh:/root/ifsetup.sh
       exec:
         - /bin/ash -c "chmod +x /root/ifsetup.sh && /root/ifsetup.sh"
-    host2_2:
+    VPC2_2:
       kind: linux
       image: floui/tiny-net-tools:latest
       binds:
@@ -112,7 +112,7 @@ topology:
     - endpoints: ["eASBR1:eth2","ePE_B:eth2"]
     - endpoints: ["eASBR2:eth1","ePE_A:eth3"]
     - endpoints: ["eASBR2:eth2","ePE_B:eth3"]
-    - endpoints: ["host1_1:eth1","PE_A:eth1"]
-    - endpoints: ["host2_1:eth1","PE_B:eth1"]
-    - endpoints: ["host1_2:eth1","ePE_A:eth1"]
-    - endpoints: ["host2_2:eth1","ePE_B:eth1"]
+    - endpoints: ["VPC1_1:eth1","PE_A:eth1"]
+    - endpoints: ["VPC2_1:eth1","PE_B:eth1"]
+    - endpoints: ["VPC1_2:eth1","ePE_A:eth1"]
+    - endpoints: ["VPC2_2:eth1","ePE_B:eth1"]
