@@ -17,18 +17,18 @@ CiscoライクなこのNOSでL3VPNの構築を試していく。
 `clab inspect --all`  
 
 # 構築するもの
-- freeRouterを使ってSR-MPLS網を構成し、L3VPNで通信可能にする  
-   - L3VPNでAS間のLinkである Inter-AS OptionC を構築  
+- freeRouterを用いたSR-MPLS網の構成とL3VPN通信  
+- Inter-AS Option Cの構築 (AS間のラベル付き経路交換)  
 
 # Inter-AS OptionCについて
-異なるAS間で経路情報を交換し、end-endの通信を行う方式  
-本構成において、ASBRがRRの役割も引き受けている  
-freeRtrのコンフィグの仕様に基づいた定義は以下の通りとする  
+異なるAS間で経路情報を交換し、End-to-Endの通信を行う方式  
+本構成ではASBRがRR（Route Reflector）の役割も兼務する  
+freeRouterのコンフィグの仕様に基づいた定義は以下の通りとする  
 
-1. ASBR、が labeled ルートを交換する
-2. ASBRはPEのIPv4 Loopback addressをBGP next hop addressとしてラベルを交換する
-3. 各ドメインのPEに対するBGP next hop addressのラベル配布オプションとして、OSPFによるSR-MPLSを使用
-4. AS間でのIPv4 Loopback addressのやり取りは別processなOSPFでアドバタイズし、BGPに再配布させる
+1. ASBR間でのラベル交換: ASBRがlabeledルートを交換
+2. Next-hopの管理: PEのIPv4 LoopbackアドレスをBGP next hopとしてラベル交換を行う
+3. ラベル配布: 各ドメインのPEに対して、OSPFによるSR-MPLS（Segment Routing）を使用
+4. 再配布の活用: Loopbackアドレスのやり取りは別プロセスのOSPFでアドバタイズし、BGPに再配布
 
 Ciscoが定義するものは下記  
 ```
@@ -44,19 +44,18 @@ Ciscoが定義するものは下記
 ```
 
 # 実現したこと
-・OSPF、BGPによるラベル転送  
-・AS間の上り、下りルート制御  
-　通常時のルート (上り、下り共に同一ルート)  
-　　Aルート: host1_1 ～ ASBR1 ～ eASBR1 ～ host1_2  
-　　Bルート: host2_1 ～ ASBR2 ～ eASBR2 ～ host2_2  
-・OSPFのECMP(ちょっと特殊)  
-・ACLによるhost端末からSR網内をハイド  
+- OSPF、BGPによるラベル転送  
+- AS間の上り、下りルート制御  
+    - 通常時のルート (上り、下り共に同一ルート)  
+    - Aルート: host1_1 ～ ASBR1 ～ eASBR1 ～ host1_2  
+    - Bルート: host2_1 ～ ASBR2 ～ eASBR2 ～ host2_2  
+- OSPFのECMP(ちょっと特殊)  
+- ACLによるhost端末からSR網内をハイド  
 
 # いつか実現したいこと
 - VPNv4 unicastのようなSAFIにVRFのRT値を注入させたVRF毎の通信  
 - BGPのバックアップパスのインストール(PIC)  
 - BFD、node protectionを利用した高速迂回ルーティング  
-   - ※仮想環境のためリンクパススルー機能が無い以上、高速迂回は無理そう  
 - コントローラを用いてPCEPを張り、PMによる遅延計算に基づいた上りトラフィック経路の最適化  
 - BGP community値での制御  
 - QoS(仮想環境でもやれるようになれたらいいな)  
