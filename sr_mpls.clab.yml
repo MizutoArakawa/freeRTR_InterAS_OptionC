@@ -1,65 +1,69 @@
 name: freeRTR_InterAS-OptionC
 
+mgmt:
+  network: free_IASC_mgmt
+  ipv4-subnet: 172.31.0.0/24
+
 topology:
   nodes:
     PE_A:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.2
+      mgmt-ipv4: 172.31.0.2
       binds:
         - startup_configuration/PE_A/rtr-sw.txt:/rtr/rtr-sw.txt
     PE_B:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.3 
+      mgmt-ipv4: 172.31.0.3 
       binds:
         - startup_configuration/PE_B/rtr-sw.txt:/rtr/rtr-sw.txt
     P1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.4 
+      mgmt-ipv4: 172.31.0.4 
       binds:
         - startup_configuration/P1/rtr-sw.txt:/rtr/rtr-sw.txt
     P2:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.5
+      mgmt-ipv4: 172.31.0.5
       binds:
         - startup_configuration/P2/rtr-sw.txt:/rtr/rtr-sw.txt
     ASBR1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.6
+      mgmt-ipv4: 172.31.0.6
       binds:
         - startup_configuration/ASBR1/rtr-sw.txt:/rtr/rtr-sw.txt
     ASBR2:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.7
+      mgmt-ipv4: 172.31.0.7
       binds:
         - startup_configuration/ASBR2/rtr-sw.txt:/rtr/rtr-sw.txt
     eASBR1:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.8
+      mgmt-ipv4: 172.31.0.8
       binds:
         - startup_configuration/eASBR1/rtr-sw.txt:/rtr/rtr-sw.txt
     eASBR2:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.9
+      mgmt-ipv4: 172.31.0.9
       binds:
         - startup_configuration/eASBR2/rtr-sw.txt:/rtr/rtr-sw.txt
     ePE_A:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.10
+      mgmt-ipv4: 172.31.0.10
       binds:
         - startup_configuration/ePE_A/rtr-sw.txt:/rtr/rtr-sw.txt
     ePE_B:
       kind: rare
       image: ghcr.io/rare-freertr/freertr-containerlab:main
-      mgmt-ipv4: 172.20.20.11
+      mgmt-ipv4: 172.31.0.11
       binds:
         - startup_configuration/ePE_B/rtr-sw.txt:/rtr/rtr-sw.txt
     

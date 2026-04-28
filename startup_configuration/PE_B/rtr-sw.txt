@@ -4,7 +4,7 @@ buggy
 logging buffered debug 10240
 logging file debug /rtr/run/logs/freertr.log
 logging rotate 655360000 /rtr/run/logs/freertr.old
-logging syslog informational local7 172.20.20.1
+logging syslog informational local7 172.31.0.1
 !
 crypto rsakey rsa import $v10$TUlJRW9nSUJBQUtDQVFCbnFoWUppUDU5QXA3N1BCQXphVWJrRndTUG5UM2RiY3pSUGxnTHFzYlkyUm50WE5GSnh5ZVB3bTFoLzUySzNHem50YzZlRnJjYVRZL2NpeG1JbjdJU1lienA1OTVib1UrQzBhSXRhNWJ0NEhMSEZ0R0x5ajBoemtNbUliYzlVWnBPWGFjVXJXWVJsRkdIck03ckh1S2l3djZTeE54QXlYblB0YzZOR3FFZkJyOWNPZE55ejNJYzdmazZoZGkvekNFb01XYzZuRjkvbzR4V0Y3Y3V5SG4vblJBL3JaV0ROODdMSTUxdHFUWlh5VkkyMHp1Q3FkUHN4Vk96K2JGdWdYb05ZSWh1VUF0QVZKU1V3QlpzUFBDbmEremFodk9wSFNLSXZQMHV2OEZoOWZnSjRHYzluT1hac3prWHhwb2NPM1pKUmNtRkg2bGZzSzJxcDBTWW8rSHRBZ01CQUFFQ2dnRUFJOTZwczNEd3hpYmpCZ0haaFVDWFpCTkc0NzdBQ2wrVThJNUcvdnAveGNjUmZwMlFXWndNNTJTYVhyK0pMdVJvMXFDRk54U2JGUUhqbHFlWEZUeFU3S0ZmTWZ5bVowUmc4OTQvNU1HR3Z4YmNBR0czN2t2emJVQW00Z25ta3RRcXRaVVlYRUpId0N0M0xxQXdGUkZoMEhueWhxeVJuZVZaUGZNbDNwTnBUd2VnNWxEc0cvY2ZGMHIvSHFEZVRzU3dzeVo1YjQ5cXlEYzJtaTBTYWZLZ0JkRnR6RTQrNWVTNUw2YjRzY0hiWmFrSktGQzlKc2lVaDg0WWFHeExwbHdUcFhIUXAwNS8xdnppd0JNTVpSMTQzanNSempyN2tqRS9hekh0VnNCaGVlYjJXcmtQYmpNSTM0L3BCYnhrTzRvZDZ5blhiNHdZTHprT0ppVUhYcWtHNFFLQmdRQ25TemphaDRJVE55ZWJxYkdidWlkT3BsbHRrU1g5SUowRVk4UE5Wcy9iMUpkS3M2KzN1VHc4K3lZWnFrV01IQkNKNDZaVUJXSzFER25PU1RBMjU3amxJaXZxSlpjOXpXNEhKU1RSVHd5dHQvcGg1K1Y2WlVsTVhQM1JKM05CWlBrbXJGcUxRL0RaZUhPR2JxbnBHNnNkRWtEVTJGUmFDaTdPeUw5K1AremQrUUtCZ1FDZW9hOXRZNFFRcSszZlNxSmw5Yis5djZNME42dllUNnd0R1krR0d2aUVQbHIvRnZnOS9mWWR1VVp0SHVGVkFjc1B1VU5ETHd4Ym8vMEI2dGRYTlFzTkZZQUhDMXB5bWRuRDJXaTJjVEQyS1pJMmIyWWJjNTJob0lRWFBPUUhmSTh0SzdqNVdLUVQyTEJHdFVuSHFQSTY0TmVSUE1HbVNoU0ZmbjRnZFdnd2xRS0JnUUNmdUZlZGZBYWFKZXh3MThDME56UlVDTW9VcTZHalhFSE04UnI5cnNaZzBVVm9rc2xQRlZFSHY1aU9wRndsK3AxbnFLc2lTTW9HcE1WWHA5U2FkdjIxOWJ3TG5yd1l5MHNqRXpsbGhKMU1OZnlkQVBPOHVYc1RweXpGUlc3cW5tYXBuNkFLbW1FV244TmNNOGVRd1ZQTE82UWVFalBtaXhaSllxeEE4dk5Jc1FLQmdCZkIwVHNKdDJLanpSa3UzVWwxMTRSOGFkM05KS0JkdGtSKzJuN1VGVG9BK0xIUlo5WW83YTRmN0VzMVg3dlNhKzNyNmdYcXl1Z0NsRWF3UEJYa2JNWkYzUW14Q3BlMU1PYmk3WXE5UXY3cTFPbndIeE9uYWdrbHVBS2U3T3V1SE9jLzhCRHYxSXJnWGU0SkFvYXpaNnVudHNFYW4wbmZPRm1SeXlQalVYcE5Bb0dBTHBIckM4Wll2ZDZucGRmaU9ycmc0ZHd1T0t1YlpidHZhRzZwQ29vZVNrU3FIU2MyNkFtODhKQkc2c0ZOTy8zTExyVkVJTFZnKzl3VzF3VzBaSmNxd09Qc3F3dGhwL05vTnBCUFBqNUdpdFk3TGlUQ21hMUtCYVZiUjJFZmp5S2RKbDJBYjZLaXVudmx6cU1WUUR6cUttVFBTOXlaWUxPOUxnUXRVTVdYQkVnPQ==
 !
@@ -25,7 +25,7 @@ scheduler errors
  exit
 !
 access-list custB_Filter
- sequence 10 permit all 100.50.81.0 255.255.255.248 all any all
+ sequence 10 permit all 10.50.81.0 255.255.255.248 all any all
  sequence 20 deny all any all any all
  exit
 !
@@ -59,7 +59,7 @@ vrf definition OOB
 !
 router ospf4 10
  vrf DEF_SEGROUT
- router-id 100.100.100.2
+ router-id 172.16.100.2
  traffeng-id 0.0.0.0
  segrout 500 base 12000
  area 0 enable
@@ -70,7 +70,7 @@ router ospf4 10
 !
 interface loopback1
  vrf forwarding DEF_SEGROUT
- ipv4 address 100.100.100.2 255.255.255.255
+ ipv4 address 172.16.100.2 255.255.255.255
  router ospf4 10 enable
  router ospf4 10 area 0
  router ospf4 10 passive
@@ -107,7 +107,7 @@ interface bundle111
 interface bundle30
  description CE_B
  vrf forwarding DEF_SEGROUT
- ipv4 address 100.50.81.2 255.255.255.252
+ ipv4 address 10.50.81.2 255.255.255.252
  ipv4 access-group-out custB_Filter
  no shutdown
  log-link-change
@@ -131,7 +131,7 @@ interface ethernet2
 interface ethernet255
  description MGMT
  vrf forwarding OOB
- ipv4 address 172.20.20.3 255.255.255.0
+ ipv4 address 172.31.0.3 255.255.255.0
  no shutdown
  no log-link-change
  exit
@@ -147,7 +147,7 @@ interface ethernet3
 router bgp4 65000
  vrf DEF_SEGROUT
  local-as 65000
- router-id 100.100.100.2
+ router-id 172.16.100.2
  address-family labeled vpnuni
  !
  template BGP-LU-ASBR1 remote-as 65000
@@ -168,9 +168,9 @@ router bgp4 65000
  template BGP-LU-ASBR2 update-source loopback1
  template BGP-LU-ASBR2 segrout
  !
- neighbor 100.100.100.100 template BGP-LU-ASBR1
+ neighbor 172.16.100.100 template BGP-LU-ASBR1
  !
- neighbor 100.100.100.200 template BGP-LU-ASBR2
+ neighbor 172.16.100.200 template BGP-LU-ASBR2
  !
  !
  redistribute connected
@@ -199,7 +199,7 @@ proxy-profile OOB
 !
 !
 !
-ipv4 route OOB 0.0.0.0 0.0.0.0 172.20.20.1
+ipv4 route OOB 0.0.0.0 0.0.0.0 172.31.0.1
 !
 !
 !
