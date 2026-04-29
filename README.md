@@ -376,3 +376,25 @@ router bgp4 <AS num>
 
 #### コンフィグ保存
 `write`
+
+# 参考資料・出典
+本記事を執筆するにあたり、以下のサイトを参考にしました。<br>
+
+- Containerlab : https://containerlab.dev/
+- freeRouter : http://www.freertr.org/
+- freeRouter（GitHub） ： https://github.com/rare-freertr/freeRtr-containerlab
+- Inter-AS OptionC : https://www.cisco.com/c/en/us/support/docs/multiprotocol-label-switching-mpls/mpls/200523-Configuration-and-Verification-of-Layer.html
+- Inter-AS OptionC : https://nsrc.org/workshops/2015/apricot2015/raw-attachment/wiki/Track3MPLS/9-Apriot_2015_Inter-AS.2.pdf
+
+# 商標
+
+- 「Docker」は、Docker, Inc.の米国およびその他の国における商標または登録商標です。
+- 「Debian」は、Software in the Public Interest, Inc.の登録商標です。
+- その他、本記事に記載されている会社名、製品名は、各社の商標または登録商標です。
+
+
+# 免責事項
+
+本記事の検証はクローズドな検証環境で実施されており、実際の通信事業用ネットワークに直接影響を与えるものではありません。<br>
+本記事に掲載された手法を実施した結果発生する損失・損害については責任を負いかねます。<br>
+また、実際の通信事業用ネットワークを模擬する際、IPアドレスやホスト名、ポートコンベンション等は同じ、もしくは類似させるようなことはせず、推測されないような値にしてください。<br>
