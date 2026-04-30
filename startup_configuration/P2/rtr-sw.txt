@@ -73,30 +73,6 @@ interface loopback1
  log-link-change
  exit
 !
-interface bundle101
- description PE_A
- vrf forwarding DEF_SEGROUT
- ipv4 address 10.100.128.6 255.255.255.252
- mpls enable
- router ospf4 10 enable
- router ospf4 10 area 0
- router ospf4 10 cost 2000
- no shutdown
- log-link-change
- exit
-!
-interface bundle111
- description PE_B
- vrf forwarding DEF_SEGROUT
- ipv4 address 10.100.129.6 255.255.255.252
- mpls enable
- router ospf4 10 enable
- router ospf4 10 area 0
- router ospf4 10 cost 2000
- no shutdown
- log-link-change
- exit
-!
 interface bundle17
  description ASBR1
  vrf forwarding DEF_SEGROUT
@@ -121,6 +97,30 @@ interface bundle18
  log-link-change
  exit
 !
+interface bundle101
+ description PE_A
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 10.100.128.6 255.255.255.252
+ mpls enable
+ router ospf4 10 enable
+ router ospf4 10 area 0
+ router ospf4 10 cost 2000
+ no shutdown
+ log-link-change
+ exit
+!
+interface bundle111
+ description PE_B
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 10.100.129.6 255.255.255.252
+ mpls enable
+ router ospf4 10 enable
+ router ospf4 10 area 0
+ router ospf4 10 cost 2000
+ no shutdown
+ log-link-change
+ exit
+!
 interface ethernet1
  description [B101]PE_A_eth3
  cdp enable
@@ -137,14 +137,6 @@ interface ethernet2
  log-link-change
  exit
 !
-interface ethernet255
- description MGMT
- vrf forwarding OOB
- ipv4 address 172.31.0.5 255.255.255.0
- no shutdown
- no log-link-change
- exit
-!
 interface ethernet3
  description [B17]ASBR1_eth2
  cdp enable
@@ -159,6 +151,14 @@ interface ethernet4
  bundle-group 18
  no shutdown
  log-link-change
+ exit
+!
+interface ethernet255
+ description MGMT
+ vrf forwarding OOB
+ ipv4 address 172.31.0.5 255.255.255.0
+ no shutdown
+ no log-link-change
  exit
 !
 console0
@@ -202,11 +202,11 @@ server telnet OOB
  security rsakey rsa
  security dsakey dsa
  security ecdsakey ecdsa
- second-port 22
  exec logging
  no exec authorization
  login authentication usr
  login logging
+ second-port 22
  vrf OOB
  exit
 !

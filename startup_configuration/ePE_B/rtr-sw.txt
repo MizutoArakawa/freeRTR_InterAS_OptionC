@@ -128,20 +128,20 @@ interface ethernet2
  log-link-change
  exit
 !
-interface ethernet255
- description MGMT
- vrf forwarding OOB
- ipv4 address 172.31.0.11 255.255.255.0
- no shutdown
- no log-link-change
- exit
-!
 interface ethernet3
  description [B18]eASBR2_eth2
  cdp enable
  bundle-group 18
  no shutdown
  log-link-change
+ exit
+!
+interface ethernet255
+ description MGMT
+ vrf forwarding OOB
+ ipv4 address 172.31.0.11 255.255.255.0
+ no shutdown
+ no log-link-change
  exit
 !
 router bgp4 64512
@@ -162,6 +162,7 @@ router bgp4 64512
  neighbor 172.16.200.100 template BGP-LU
  !
  neighbor 172.16.200.200 template BGP-LU
+ !
  !
  !
  redistribute connected
@@ -208,10 +209,10 @@ server telnet OOB
  security rsakey rsa
  security dsakey dsa
  security ecdsakey ecdsa
- second-port 22
  exec timeout 0
  no exec authorization
  login authentication usr
+ second-port 22
  vrf OOB
  exit
 !

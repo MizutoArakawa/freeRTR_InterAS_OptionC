@@ -213,14 +213,6 @@ interface ethernet2
  log-link-change
  exit
 !
-interface ethernet255
- description MGMT
- vrf forwarding OOB
- ipv4 address 172.31.0.6 255.255.255.0
- no shutdown
- no log-link-change
- exit
-!
 interface ethernet3
  description [B50]ASBR2_eth3
  cdp enable
@@ -243,6 +235,14 @@ interface ethernet5
  bundle-group 1
  no shutdown
  log-link-change
+ exit
+!
+interface ethernet255
+ description MGMT
+ vrf forwarding OOB
+ ipv4 address 172.31.0.6 255.255.255.0
+ no shutdown
+ no log-link-change
  exit
 !
 router bgp4 65000
@@ -294,8 +294,6 @@ router bgp4 65000
  template iBGP-LU segrout
  template iBGP-LU next-hop-self
  !
- neighbor 192.18.5.5 template eBGP
- !
  neighbor 172.16.100.1 template RRC-LU
  !
  neighbor 172.16.100.2 template RRC-LU
@@ -303,6 +301,9 @@ router bgp4 65000
  neighbor 172.16.100.200 template iBGP-LU
  !
  neighbor 172.16.200.100 template eBGP-LU
+ !
+ neighbor 192.18.5.5 template eBGP
+ !
  !
  !
  redistribute connected route-policy CON-TO-BGP
@@ -349,10 +350,10 @@ server telnet OOB
  security rsakey rsa
  security dsakey dsa
  security ecdsakey ecdsa
- second-port 22
  exec timeout 0
  no exec authorization
  login authentication usr
+ second-port 22
  vrf OOB
  exit
 !

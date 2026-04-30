@@ -80,6 +80,15 @@ interface loopback1
  log-link-change
  exit
 !
+interface bundle30
+ description CE_A
+ vrf forwarding DEF_SEGROUT
+ ipv4 address 10.50.80.2 255.255.255.252
+ ipv4 access-group-out custA_Filter
+ no shutdown
+ log-link-change
+ exit
+!
 interface bundle100
  description P1
  vrf forwarding DEF_SEGROUT
@@ -104,15 +113,6 @@ interface bundle101
  log-link-change
  exit
 !
-interface bundle30
- description CE_A
- vrf forwarding DEF_SEGROUT
- ipv4 address 10.50.80.2 255.255.255.252
- ipv4 access-group-out custA_Filter
- no shutdown
- log-link-change
- exit
-!
 interface ethernet1
  description [B30]CE_A
  bundle-group 30
@@ -128,20 +128,20 @@ interface ethernet2
  log-link-change
  exit
 !
-interface ethernet255
- description MGMT
- vrf forwarding OOB
- ipv4 address 172.31.0.2 255.255.255.0
- no shutdown
- no log-link-change
- exit
-!
 interface ethernet3
  description [B101]P2_eth1
  cdp enable
  bundle-group 101
  no shutdown
  log-link-change
+ exit
+!
+interface ethernet255
+ description MGMT
+ vrf forwarding OOB
+ ipv4 address 172.31.0.2 255.255.255.0
+ no shutdown
+ no log-link-change
  exit
 !
 router bgp4 65000
@@ -171,6 +171,7 @@ router bgp4 65000
  neighbor 172.16.100.100 template BGP-LU-ASBR1
  !
  neighbor 172.16.100.200 template BGP-LU-ASBR2
+ !
  !
  !
  redistribute connected
@@ -213,11 +214,8 @@ ipv4 route OOB 0.0.0.0 0.0.0.0 172.31.0.1
 !
 !
 server telnet OOB
+ security protocol telnet
  security authentication usr
- security rsakey rsa
- security dsakey dsa
- security ecdsakey ecdsa
- second-port 22
  exec timeout 0
  exec logging
  no exec authorization
