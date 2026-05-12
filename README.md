@@ -1,6 +1,6 @@
 # 目的
-OSS NOSであるRARE/freeRTRに無限の可能性があることを見出したい。  
-CiscoライクなこのNOSでL3VPNの構築を試していく。  
+OSS NOSであるRARE/freeRTRに無限の可能性があることを見出したいという思いから、始めました。  
+CiscoライクなこのNOSでL3VPNの構築を試していきます。  
 
 # 前提
 ネットワーク検証環境はContainerlabの利用を前提としています。
@@ -128,7 +128,7 @@ Ciscoが定義するものは下記
 
 | 項目 | 設定内容 |
 | --- | --- |
-| VRF定義 | `DEF_SEGROUT` (SR-MPLS網内) |
+| VRF定義 | `DEF_SEGROUT` |
 | OSPFプロセス番号 | AS内: `10` / AS外: `20` |
 | SRGB (segrout 500 base 12000) | 12000 ～ 12499 |
 | AS番号 | eなし装置: `65000` / eあり装置: `64512` |
@@ -357,7 +357,7 @@ router bgp4 <AS num>
 `write`
 
 # 参考資料・出典
-本記事を執筆するにあたり、以下のサイトを参考にしました。<br>
+本記事を執筆するにあたり、以下のサイトを参考にしました。  
 
 - Containerlab : https://containerlab.dev/
 - freeRouter : http://www.freertr.org/
@@ -367,11 +367,19 @@ router bgp4 <AS num>
 
 # 商標
 
+- 「Cisco、Cisco IOS、Cisco IOS XR」は、米国およびその他の国における Cisco Systems, Inc. の商標または登録商標です。
 - 「Docker」は、Docker, Inc.の米国およびその他の国における商標または登録商標です。
-- 「Debian」は、Software in the Public Interest, Inc.の登録商標です。
+- 「freeRouter」は、Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) および作者独自の「Beer-ware License」に基づき提供されています。
+- 「HPE ProLiant」は、Hewlett Packard Enterprise Development LPの商標です。
 - その他、本記事に記載されている会社名、製品名は、各社の商標または登録商標です。
+
 
 # 免責事項
 
-本記事に掲載された手法を実施した結果発生する損失・損害については責任を負いかねます。<br>
-また、実際の通信事業用ネットワークを模擬する際、IPアドレスやホスト名、ポートコンベンション等は同じ、もしくは類似させるようなことはせず、推測されないような値にしてください。<br>
+本記事に掲載された手法を実施した結果発生する損失・損害については責任を負いかねます。  
+また、実際の通信事業用ネットワークを模擬する際、IPアドレスやホスト名、ポートコンベンション等は同じ、もしくは類似させるようなことはせず、推測されないような値にしてください。  
+
+
+# License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
